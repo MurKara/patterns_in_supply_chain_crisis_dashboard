@@ -1,0 +1,15 @@
+# Knowledge Base project configuration
+# Used by scripts/kb_push.py and scripts/create_github_repo.py
+
+github:
+  username: MurKara
+  repo_name: patterns-in-supply-chain-crisis
+  description: >
+    Knowledge base: supply chain crisis patterns (2026 Hormuz scenario).
+    Research wiki covering oil, food, fertilizer, semiconductors, shipping,
+    and Turkey-specific exposure. LLM-assisted, auto-synced to GitHub.
+
+kb:
+  name: Patterns in Supply Chain Crisis
+  language: English
+  zoom_level: region  # satellite | region | city | street

@@ -1,0 +1,84 @@
+%% How to Day Trade for a Living — Andrew Aziz (2015)
+%% Phase 1 dependency mindmap — portable Mermaid version.
+%% Companion to `mindmap_obsidian.canvas` (visual radial layout).
+%%
+%% Edge conventions:
+%%   -->   solid  = hard dependency (read the source before the target)
+%%   -.->  dashed = conceptual link (not strictly required, but clarifies)
+%%
+%% Color conventions (match Obsidian canvas):
+%%   root        = red     (book entry point)
+%%   section     = orange  (appendix / reference)
+%%   foundational= yellow  (prerequisites)
+%%   methods     = green   (operational knowledge)
+%%   application = teal    (synthesis / worked examples)
+%%   advanced    = purple  (meta / career-level)
+
+graph TD
+    %% ===== Nodes =====
+    ROOT["<b>How to Day Trade<br/>for a Living</b><br/><i>Andrew Aziz · 2015</i>"]:::root
+
+    CH1["<b>Ch 1</b><br/>Introduction<br/><i>foundational · L254</i>"]:::foundational
+    CH2["<b>Ch 2</b><br/>How Day Trading Works<br/><i>Stocks in Play · L397</i>"]:::foundational
+    CH6["<b>Ch 6</b><br/>Candlesticks<br/><i>price action · L1248</i>"]:::foundational
+
+    CH3["<b>Ch 3</b><br/>Risk &amp; Psychology<br/><i>2% · 2:1 R/R · L560</i>"]:::methods
+    CH4["<b>Ch 4</b><br/>Find Stocks<br/><i>gappers · scans · L729</i>"]:::methods
+    CH5["<b>Ch 5</b><br/>Tools &amp; Platforms<br/><i>DAS · L2 · VWAP · L942</i>"]:::methods
+    CH7["<b>Ch 7</b><br/>Strategies (9)<br/><i>ABCD · Bull Flag · ORB · L1379</i>"]:::methods
+
+    CH8["<b>Ch 8</b><br/>Step by Step<br/><i>morning routine · L2040</i>"]:::application
+    CH9["<b>Ch 9</b><br/>Case Study<br/><i>Hiltz BHOD · L2166</i>"]:::application
+
+    CH10["<b>Ch 10</b><br/>Next Steps<br/><i>business plan · L2323</i>"]:::advanced
+
+    RULES["<b>10 Rules</b><br/><i>distillation · L2709</i>"]:::section
+    GLOSSARY["<b>Glossary</b><br/><i>A-Z reference · L2733</i>"]:::section
+
+    %% ===== Entry edges from root =====
+    ROOT --> CH1
+    ROOT --> CH6
+    ROOT -.-> GLOSSARY
+
+    %% ===== Hard dependencies (solid) =====
+    CH1 --> CH2
+    CH2 --> CH3
+    CH2 --> CH4
+    CH3 --> CH5
+    CH4 --> CH5
+    CH5 --> CH7
+    CH6 --> CH7
+    CH4 --> CH8
+    CH5 --> CH8
+    CH7 --> CH8
+    CH7 --> CH9
+    CH8 --> CH9
+    CH9 --> CH10
+
+    %% ===== Conceptual links (dashed) =====
+    CH3 -.-> CH10
+    CH10 -.-> RULES
+    CH2 -.-> GLOSSARY
+    CH5 -.-> GLOSSARY
+    CH6 -.-> GLOSSARY
+
+    %% ===== Legend (rendered as a disconnected subgraph) =====
+    subgraph LEGEND ["Legend"]
+        direction LR
+        L_ROOT["root"]:::root
+        L_SEC["section"]:::section
+        L_FND["foundational"]:::foundational
+        L_MTH["methods"]:::methods
+        L_APP["application"]:::application
+        L_ADV["advanced"]:::advanced
+        L_SOL["hard dep"] --> L_SOL2["target"]
+        L_DSH["concept"] -.-> L_DSH2["target"]
+    end
+
+    %% ===== classDef styles =====
+    classDef root         fill:#e74c3c,stroke:#922b21,stroke-width:2px,color:#ffffff;
+    classDef section      fill:#f39c12,stroke:#b9770e,stroke-width:1px,color:#1a1a1a;
+    classDef foundational fill:#f7dc6f,stroke:#b7950b,stroke-width:1px,color:#1a1a1a;
+    classDef methods      fill:#58d68d,stroke:#1e8449,stroke-width:1px,color:#0b3d1a;
+    classDef application  fill:#48c9b0,stroke:#117864,stroke-width:1px,color:#0b3d3a;
+    classDef advanced     fill:#bb8fce,stroke:#6c3483,stroke-width:1px,color:#1c0f2a;

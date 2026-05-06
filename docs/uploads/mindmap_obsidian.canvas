@@ -1,0 +1,38 @@
+{
+	"nodes":[
+		{"id":"root","type":"text","text":"# How to Day Trade for a Living\n**Andrew Aziz — 2015**\n\n_Retail intraday equity trading_\nsource: `Quant_KB_raw/How to Day Trade for a Living.md`","x":-260,"y":-80,"width":480,"height":200,"color":"1"},
+		{"id":"ch1","type":"text","text":"**Ch 1 — Introduction**\n_foundational_\n\nline 254\n• Day trading = profession, not lottery\n• 2020 Hindsight framing","x":-160,"y":-980,"width":340,"height":200,"color":"3"},
+		{"id":"ch2","type":"text","text":"**Ch 2 — How Day Trading Works**\n_foundational_\n\nline 397\n• Day vs swing · long vs short\n• Retail vs institutional · HFT\n• **Stocks in Play**","x":369,"y":-808,"width":327,"height":188,"color":"3"},
+		{"id":"ch4","type":"text","text":"**Ch 4 — Find Stocks**\n_methods_\n\nline 729\n• Float / market-cap tiers\n• Pre-market gappers\n• Real-time scans · 2–4 names","x":696,"y":218,"width":404,"height":202,"color":"4"},
+		{"id":"ch5","type":"text","text":"**Ch 5 — Tools & Platforms**\n_methods_\n\nline 942\n• IB / CMEG · DAS Trader · L2\n• 9/20 EMA · 50/200 SMA · VWAP\n• Orders · hotkeys · PDT","x":369,"y":668,"width":371,"height":212,"color":"4"},
+		{"id":"ch6","type":"text","text":"**Ch 6 — Candlesticks**\n_foundational_\n\nline 1248\n• Bullish / bearish / indecision\n• Engulfing · hammer · Doji\n• Hollow = buy · filled = sell","x":-160,"y":840,"width":320,"height":140,"color":"3"},
+		{"id":"ch7","type":"text","text":"**Ch 7 — Strategies**\n_methods_\n\nline 1379\n• ABCD · Bull Flag · Reversals\n• MA Trend · VWAP · S/R\n• Red-to-Green · ORB","x":-689,"y":668,"width":320,"height":140,"color":"4"},
+		{"id":"ch8","type":"text","text":"**Ch 8 — Step by Step**\n_applications_\n\nline 2040\n• Morning routine\n• Watchlist → if-then plan\n• Execution + review","x":-1016,"y":218,"width":320,"height":140,"color":"5"},
+		{"id":"ch9","type":"text","text":"**Ch 9 — Case Study**\n_applications_\n\nline 2166\n• John Hiltz\n• Break of High of Day\n• End-to-end narrated trade","x":-1016,"y":-358,"width":320,"height":140,"color":"5"},
+		{"id":"ch10","type":"text","text":"**Ch 10 — Next Steps**\n_advanced_\n\nline 2323\n• 7 essentials · education\n• Discipline · mentorship\n• **Trading business plan**","x":-689,"y":-808,"width":320,"height":140,"color":"6"},
+		{"id":"glossary","type":"text","text":"**Glossary**\n_section · reference_\n\nline 2733\nA–Z defined terms. Use as lookup\nfor any jargon in chapters.","x":1140,"y":1020,"width":320,"height":140,"color":"2"},
+		{"id":"legend","type":"text","text":"## Legend — colors\n\n**1 Red** — book root\n**2 Orange** — part / section\n**3 Yellow** — foundational\n**4 Green** — methods\n**5 Cyan/Teal** — applications\n**6 Purple** — advanced\n\n## Legend — edges\n→ hard dependency\n(dotted = conceptual — rendered as\ndashed in Mermaid counterpart)","x":-1480,"y":-1180,"width":380,"height":260,"color":"2"},
+		{"id":"ch3","type":"text","text":"**Ch 3 — Risk & Psychology**\n_methods_\n\nline 560\n• 2% rule · 2:1 min R/R\n• No averaging down\n• Hulk day · hard stops","x":884,"y":-397,"width":416,"height":218,"color":"4"},
+		{"id":"rules","type":"text","text":"**Andrew's 10 Rules**\n_section · distillation_\n\nline 2709\nPrintable one-page summary of the\nentire book. Post next to desk.","x":932,"y":-1020,"width":368,"height":212,"color":"2"}
+	],
+	"edges":[
+		{"id":"e_root_ch1","fromNode":"root","fromSide":"top","toNode":"ch1","toSide":"bottom"},
+		{"id":"e_root_ch6","fromNode":"root","fromSide":"bottom","toNode":"ch6","toSide":"top"},
+		{"id":"e_root_glos","fromNode":"root","fromSide":"right","toNode":"glossary","toSide":"left"},
+		{"id":"e_ch1_ch2","fromNode":"ch1","fromSide":"right","toNode":"ch2","toSide":"left"},
+		{"id":"e_ch2_ch3","fromNode":"ch2","fromSide":"bottom","toNode":"ch3","toSide":"top"},
+		{"id":"e_ch3_ch5","fromNode":"ch3","fromSide":"bottom","toNode":"ch5","toSide":"top"},
+		{"id":"e_ch4_ch5","fromNode":"ch4","fromSide":"bottom","toNode":"ch5","toSide":"top"},
+		{"id":"e_ch5_ch7","fromNode":"ch5","fromSide":"left","toNode":"ch7","toSide":"right"},
+		{"id":"e_ch6_ch7","fromNode":"ch6","fromSide":"left","toNode":"ch7","toSide":"right"},
+		{"id":"e_ch7_ch8","fromNode":"ch7","fromSide":"left","toNode":"ch8","toSide":"right"},
+		{"id":"e_ch4_ch8","fromNode":"ch4","fromSide":"left","toNode":"ch8","toSide":"right"},
+		{"id":"e_ch5_ch8","fromNode":"ch5","fromSide":"left","toNode":"ch8","toSide":"right"},
+		{"id":"e_ch7_ch9","fromNode":"ch7","fromSide":"top","toNode":"ch9","toSide":"bottom"},
+		{"id":"e_ch8_ch9","fromNode":"ch8","fromSide":"top","toNode":"ch9","toSide":"bottom"},
+		{"id":"e_ch9_ch10","fromNode":"ch9","fromSide":"top","toNode":"ch10","toSide":"bottom"},
+		{"id":"e_ch3_ch10","fromNode":"ch3","fromSide":"left","toNode":"ch10","toSide":"right"},
+		{"id":"e_ch10_rules","fromNode":"ch10","fromSide":"right","toNode":"rules","toSide":"left"},
+		{"id":"e_ch2_ch4","fromNode":"ch2","fromSide":"bottom","toNode":"ch4","toSide":"top"}
+	]
+}
